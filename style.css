@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url("/background-img.jpg");
+    background-size: contain;
+}
+
+header {
+    /* position: -webkit-sticky; */
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    /* margin-top: -50px; */
+    /* padding: 5px; */
+}
+
+header nav {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background: #1b1b1b;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    flex-wrap: wrap;
+}
+
+header nav .logo {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 1s ease;
+}
+
+header nav ul li a.active,
+header nav ul li a:hover {
+    color: #111;
+    background: #fff;
+} 
+
+header nav .menu-btn .open-btn {
+    /* color: #fff;
+    font-size: 40px; */
+    cursor: pointer;
+    width: 60px;
+    display: none;
+}
+
+header nav .menu-btn .close-btn {
+    /* color: #fff;
+    font-size: 40px; */
+    cursor: pointer;
+    width: 60px;
+    display: none;
+    position: absolute;
+    top: 10px;
+}
+
+/* ------------------------- */
+
+/* code for hiding checkbox */
+header nav input[type="checkbox"] {
+    display: none;
+}
+/* ------------------------ */
+
+/* Code for responsive design */
+
+/* the header padding will adjust if the screen reach 1050px width*/
+@media (max-width: 1200px) {
+    header nav {
+        padding: 0 40px 0 50px
+    }
+}
+/* ------------------------------------------------------------- */
+
+/* the list item will hide, then the hamburger button will appear if the screen reach 1000px width*/
+@media (max-width: 1200px) {
+    /* header nav .menu-btn i {
+        display: block;
+    } */
+
+    header nav .menu-btn .open-btn {
+        display: block;
+    }
+/* --------------------------------------------------------------------------------------------- */
+
+    /* code for turning hamburger button to X button */
+    /* #click:checked ~ .menu-btn i::before {
+    content: "\f00d";
+    } */
+
+    #click:checked ~ .menu-btn .open-btn{
+        display: none;
+        
+        }
+
+    #click:checked ~ .menu-btn .close-btn{
+            display: block;
+            right: 40px;
+            }
+    /* --------------------------------------------- */
+
+    /* Properties of navigation Unordered list container */
+    header nav ul {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background: #111;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        display: block;
+        transition: all 1s ease;
+    }
+    /* ------------------------------------------------ */
+
+    /* For close and open of the hamburger navigation */
+    #click:checked ~ ul {
+        left: 0px;
+    }
+    /* ------------------------------------------------ */
+
+    /* Properties of list container */
+    header nav ul li {
+        width: 100%;
+        margin: 40px 0;
+    }
+    /* ---------------------------- */
+
+    header nav ul li a {
+        width: 100%;
+        margin-left: -100%;
+        display: block;
+        font-size: 20px;
+        transition: 0.6s cubic-bezier(0.68, -055, 0.265, 1.55);
+    }
+
+    #click:checked ~ ul li a {
+        margin-left: 0px;
+    }
+    
+    header nav ul li a.active,
+    header nav ul li a:hover {
+        background: none;
+        color: rgb(91, 102, 102);
+        cursor: pointer;
+    } 
+}
+
+/* Gelo Image size */
+.geloImg {
+    width: 300px;
+    border-radius: 50%;
+}
+/* ---------- */
+
+/* About Me */
+.container-about {
+    /* padding-top: 0px; */
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 500px; */
+    margin-top: 20px;
+    margin-bottom: 30px;
+    justify-content: space-evenly;
+    /* border: 1px solid black; */
+}
+
+.about-meh1 {
+    display: flex;
+    text-align: center;
+    border: 1px solid black
+}
+
+.container-me {
+    width: 550px;
+    height: 500px;
+    /* border: 1px solid black; */
+    text-align: center;
+    
+}
+
+.container-tag {
+    display: flex;
+    width: 550px;
+    height: 500px;
+    /* border: 1px solid black; */
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+
+.tagline p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+}
+
+.tagline, .img-tagline {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    justify-content: space-evenly;
+}
+
+.img-tagline img {
+    width: 150px;
+    margin: 10px 0px
+}
+
+/* EDUCATION */
+.title-education h1 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.container-education {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 380px;
+    grid-template-rows: 250px 320px;
+    grid-template-areas: "image" "text" ;
+  
+    font-family: 'Poppins', sans-serif;
+    border-radius: 18px;
+    background:  white;
+    box-shadow:  3px 3px 10px rgba(0, 0, 0, 0.9);
+    text-align: center;
+  
+    transition: 0.9s ease;
+    margin: 40px;
+}
+
+.card:hover {
+transform: scale(1.05);
+box-shadow: 5px 5px 15px rgb(0, 0, 0, 0.6);
+}
+
+.card-image {
+grid-area: image;
+background: url("./imgFile/EggIncubator.jpg");
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+background-size: cover;
+}
+
+.card-text {
+grid-area: text;
+margin: 25px;
+}
+
+.card-text .date {
+color: rgb(255, 7, 110);
+font-size: 13px;
+}
+
+.card-text p {
+color: grey;
+font-size: 13px;
+font-weight: 500;
+text-align: justify;
+}
+
+.card-text h2 {
+margin-top: 0px;
+font-size: 28px;
+}
+
+/* Card2 */
+
+.card-image.card2 {
+background: url("./imgFile/AutomatedParkSystem.jpg");
+background-size: cover;
+}
+
+
+/* Card3 */
+
+.card-image.card3 {
+background: url("./imgFile/AutomatedHouse.jpg");
+background-size: cover;
+}
+
+/* skills */
+.container-skills {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+text-align: center;
+width: 80%;
+height: 100%;
+margin: auto;
+gap: 100px;
+/* border: 1px solid black; */
+}
+
+.skills h1{
+text-align: center;
+margin-bottom: 30px;
+margin-top: 50px;
+}
+
+.img2 {
+width: 180px;
+}
+
+.container-skills p {
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 600;
+}
+
+/* My Contact and Resume download */
+.container-contact {
+    width: 100vw;
+    height: 700px;
+    text-align: center;
+    margin: auto;
+    /* border: 1px solid black; */
+}
+
+.container-contact h1 {
+    margin-top: 12%;
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.container-contact a {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3em;
+    text-decoration: none;
+    color: #111;    
+    padding: 30px 50px;
+    border-radius: 50px;
+    outline: none;
+}
+
+.btn-link:hover {
+    background-color: #252525;
+    color: #f2f2f2;
+    transition: .5s ease;
+}
+
+.contact p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+}
+
+@media (max-width: 900px) {
+    .contact-content {
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+/* ---------------------------------------------------------- */
+.container-feedback {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid black; */
+}
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.feedback-title h1 {
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.feedback-title hr {
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: #353535;
+    border-radius: 20px;
+}
+
+.feedback-input {
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #ffffff;
+    border-radius: 50px;
+    background-color: #353535;
+}
+
+.feedback-form textarea {
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+
+.feedback-input:focus {
+    border: 2px solid #727272;
+}
+
+.feedback-submit {
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    gap: 10px;
+    border-radius: 50px;
+    background: linear-gradient(270deg, #ffffff, #000000);
+    cursor: pointer;
+    color: #fff;
+}
+
