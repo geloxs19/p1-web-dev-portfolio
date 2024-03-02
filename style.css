@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 * {
     margin: 0;
@@ -12,13 +13,10 @@ body {
 }
 
 header {
-    /* position: -webkit-sticky; */
     position: sticky;
     top: 0;
     z-index: 1;
     width: 100%;
-    /* margin-top: -50px; */
-    /* padding: 5px; */
 }
 
 header nav {
@@ -66,16 +64,12 @@ header nav ul li a:hover {
 } 
 
 header nav .menu-btn .open-btn {
-    /* color: #fff;
-    font-size: 40px; */
     cursor: pointer;
     width: 60px;
     display: none;
 }
 
 header nav .menu-btn .close-btn {
-    /* color: #fff;
-    font-size: 40px; */
     cursor: pointer;
     width: 60px;
     display: none;
@@ -100,26 +94,13 @@ header nav input[type="checkbox"] {
     }
 }
 /* ------------------------------------------------------------- */
-
-/* the list item will hide, then the hamburger button will appear if the screen reach 1000px width*/
 @media (max-width: 1200px) {
-    /* header nav .menu-btn i {
-        display: block;
-    } */
-
     header nav .menu-btn .open-btn {
         display: block;
     }
 /* --------------------------------------------------------------------------------------------- */
-
-    /* code for turning hamburger button to X button */
-    /* #click:checked ~ .menu-btn i::before {
-    content: "\f00d";
-    } */
-
     #click:checked ~ .menu-btn .open-btn{
         display: none;
-        
         }
 
     #click:checked ~ .menu-btn .close-btn{
@@ -184,28 +165,25 @@ header nav input[type="checkbox"] {
 
 /* About Me */
 .container-about {
-    /* padding-top: 0px; */
     display: flex;
     flex-wrap: wrap;
-    /* gap: 500px; */
     margin-top: 20px;
     margin-bottom: 30px;
     justify-content: space-evenly;
-    /* border: 1px solid black; */
 }
 
-.about-meh1 {
-    display: flex;
-    text-align: center;
-    border: 1px solid black
+.aboutMe1 {
+    font-family: Poppins, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    /* text-align: center; */
+    text-align: justify;
 }
 
 .container-me {
-    width: 550px;
+    width: 600px;
     height: 500px;
-    /* border: 1px solid black; */
     text-align: center;
-    
 }
 
 .container-tag {
@@ -346,23 +324,26 @@ font-weight: 600;
 /* My Contact and Resume download */
 .container-contact {
     width: 100vw;
-    height: 700px;
+    height: 25%;
+    display: block;
+    flex-wrap: wrap;
     text-align: center;
-    margin: auto;
     /* border: 1px solid black; */
-}
-
-.container-contact h1 {
-    margin-top: 12%;
-    margin-bottom: 20px;
-    font-size: 50px;
+    padding-top: 60px;
+    padding-bottom: 80px;
 }
 
 .contact-content {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding-bottom: 100px;
+    gap: 80px
+}
+
+.h1-font {
+    font-size: 50px;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
 }
 
 .container-contact a {
@@ -382,8 +363,31 @@ font-weight: 600;
 }
 
 .contact p {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Comfortaa, sans-serif;
     font-size: 2em;
+    font-weight: 500;
+    padding: 10px;
+}
+
+.contact-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    /* border: 1px solid black; */
+}
+
+.contact-icon img {
+    width: 70px;
+    border-radius: 50px;
+    transition: .7s ease;
+}
+
+.contact-icon img:hover {
+    cursor: pointer;
+    transform: transform scale(1.05);
+    box-shadow: 2px 2px 30px rgb(0, 0, 0, 0.);
 }
 
 @media (max-width: 900px) {
@@ -395,11 +399,13 @@ font-weight: 600;
 
 /* ---------------------------------------------------------- */
 .container-feedback {
-    height: 80vh;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     /* border: 1px solid black; */
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .feedback-form {
@@ -442,11 +448,10 @@ font-weight: 600;
 }
 
 .feedback-input:focus {
-    border: 2px solid #727272;
+    border: 3px solid #727272;
 }
 
 .feedback-submit {
-    /* border: 1px solid black; */
     display: flex;
     align-items: center;
     padding: 15px 30px;
@@ -457,4 +462,3 @@ font-weight: 600;
     cursor: pointer;
     color: #fff;
 }
-
