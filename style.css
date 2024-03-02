@@ -386,8 +386,8 @@ font-weight: 600;
 
 .contact-icon img:hover {
     cursor: pointer;
-    transform: transform scale(1.05);
-    box-shadow: 2px 2px 30px rgb(0, 0, 0, 0.);
+    transform: scale(1.05);
+    box-shadow: 2px 2px 30px rgb(0, 0, 0, 0.6);
 }
 
 @media (max-width: 900px) {
@@ -439,6 +439,7 @@ font-weight: 600;
     color: #ffffff;
     border-radius: 50px;
     background-color: #353535;
+    transition: .7s ease-in-out;
 }
 
 .feedback-form textarea {
@@ -448,7 +449,7 @@ font-weight: 600;
 }
 
 .feedback-input:focus {
-    border: 3px solid #727272;
+    box-shadow: 2px 2px 30px rgb(0, 0, 0, 0.9);
 }
 
 .feedback-submit {
